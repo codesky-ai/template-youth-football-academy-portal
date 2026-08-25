@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    direction: rtl;
+    font-family: 'Cairo', 'Noto Sans Arabic', 'Amiri', Arial, sans-serif;
+  }
+
+  body {
+    direction: rtl;
+    text-align: right;
+    font-feature-settings: "rlig", "calt", "liga", "kern", "arab";
+    text-rendering: optimizeLegibility;
+  }
+
+  .font-arabic {
+    font-family: 'Cairo', 'Noto Sans Arabic', 'Amiri', Arial, sans-serif;
+    font-feature-settings: "rlig", "calt", "liga", "kern", "arab";
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer components {
+  .rtl {
+    direction: rtl;
+    text-align: right;
+  }
+
+  .btn-primary {
+    @apply bg-football-green hover:bg-football-dark text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 border border-gray-200;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-football-green focus:border-transparent text-right;
+  }
+
+  .sidebar-link {
+    @apply flex items-center px-4 py-2 text-sm font-medium rounded-md transition-colors duration-150 ease-in-out;
+  }
+
+  .sidebar-link-active {
+    @apply bg-football-green text-white;
+  }
+
+  .sidebar-link-inactive {
+    @apply text-gray-600 hover:bg-gray-50 hover:text-gray-900;
+  }
+}
